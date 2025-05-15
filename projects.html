@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+    <header>
+        <h1>Moje projekty</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Hlavní stránka</a></li>
+                <li><a href="about_me.html">O mně</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/davidmatyas10" target="_blank">
+                    <img src="images/github.png" alt="Github" width="40" height="40">
+                </a>
+                <a href="https://www.linkedin.com/in/david-matyáš-1877b0302/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn" width="40" height="40">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://github.com/davidmatyas10/skladova-evidence" target="_blank">
+            <h2>Webová aplikace pro skladovou evidenci</h2>
+        </a>
+
+        <div class="image-grid">
+            <img src="images/skladova_evidence_1.png" alt="Skladová Evidence 1">
+            <img src="images/skladova_evidence_2.png" alt="Skladová Evidence 2">
+            <img src="images/skladova_evidence_3.png" alt="Skladová Evidence 3">
+            <img src="images/skladova_evidence_4.png" alt="Skladová Evidence 4">
+        </div>
+
+        <a href="https://github.com/davidmatyas10/Jumping-Knight">
+            <h2>Jumping Knight</h2>
+        </a>
+        <a href="https://github.com/davidmatyas10/Jumping-Knight-playable">
+            <h2>Hratelná verze</h2>
+        </a>
+
+        <div class="image-grid">
+            <img src="images/Jumping_Knight.png" alt="Jumping-Knight 1">
+            <img src="images/Jumping_Knight2.png" alt="Jumping-Knight 2">
+            <img src="images/Jumping_Knight3.png" alt="Jumping-Knight 3">
+        </div>
+
+        
+    </main>
+    
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Chyba při načítání footeru:', error));
+    </script>
+</body>
+</html>

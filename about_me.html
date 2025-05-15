@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutme.css">
+    <title>O mně</title>
+</head>
+<body>
+
+    <header>
+        <h1>O mně</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Hlavní stránka</a></li>
+                <li><a href="projects.html">Moje projekty</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/davidmatyas10" target="_blank">
+                    <img src="images/github.png" alt="Github" width="40" height="40">
+                </a>
+                <a href="https://www.linkedin.com/in/david-matyáš-1877b0302/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn" width="40" height="40">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <p>Věnuji se tvorbě webových stránek se zasměřením na HTML, CSS, SQL. Mám menší zkušenosti s PHP, JavaScriptem 
+            a vývojem v Unity.
+        </p>
+        <p>
+            Aktuálně pracuji na osobním webu a herním projektu v Unity. Neustále se učím nové technologie
+            a snažím se zdokonalovat moje dovednosti ve front-endu nebo back-endu.
+        </p>
+
+        <p>Níže se může podívat na můj životopis.</p>
+        <a href="David_Matyáš_CV.pdf" download>Životopis</a>
+    </main>
+    
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Chyba při načítání footeru:', error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>David Matyáš</title>
+</head>
+<body>
+
+    <header>
+        <h1>David Matyáš</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="about_me.html">O mně</a></li>
+                <li><a href="projects.html">Moje projekty</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/davidmatyas10" target="_blank">
+                    <img src="images/github.png" alt="Github" width="40" height="40">
+                </a>
+                <a href="https://www.linkedin.com/in/david-matyáš-1877b0302/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn" width="40" height="40">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Vítejte na mé osobní stránce</h2>
+            <p>Jsem David Matyáš, vývojář se zájmem o webové technologie a herní vývoj.</p>
+            <p>Na této stránce najdete informace o mně a mých projektech.</p>
+            <p>Aktuálně hledám práci okolo vývoje webových stránek a aplikací.</p>
+        </section>
+
+        <section>
+            <h2>Co se právě učím?</h2>
+            <p>Momentálně se učím základy v C#.</p>
+            <p>Další věc kterou se snažím naučit je backend.</p>
+        </section>
+
+        <section>
+            <h2>Nástroje, které používám</h2>
+            <p>💻 Vývojové prostředí: Visual Studio Code, Visual Studio, Rider</p>
+            <p>🌐 Vývoj webu: HTML, CSS, PHP, trochu JavaScript</p>
+            <p>🎮 Herní Vývoj: Unity a C#, začínám s Godotem</p>
+        </section>
+
+    </main>
+    
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Chyba při načítání footeru:', error));
+    </script>
+</body>
+</html>
